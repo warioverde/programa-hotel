@@ -14,24 +14,41 @@ import java.util.Scanner;
 public class Habitacion {
    
    int precio = 40000;
-   static int estado;
-   static int noches;
-  
-  public static int setEstado(){
-      Scanner leer = new Scanner(System.in);
-      System.out.println("ingrese estado habitacion");
-      estado=leer.nextInt();
-     return estado;
-}
-  public static int setNoches(){
-      Scanner leer = new Scanner(System.in);
-      System.out.println("ingrese estado habitacion");
-      noches=leer.nextInt();
-      return noches;
-  }
-  public int getNoches(){
-      return noches;
-  }
+    int estado=0;
+    int noches=0;
+
+    public Habitacion(int estado, int noches) {
+        this.estado=estado;
+        this.noches=noches;
+        if(estado==0)
+        {
+            noches=0;
+        }
+    }
+
+    public void setPrecio(int precio) {
+        this.precio = precio;
+    }
+
+    public int getEstado() {
+        return estado;
+    }
+
+    public void setEstado(int estado) {
+        this.estado = estado;
+    }
+
+    public int getNoches() {
+        return noches;
+    }
+
+    public void setNoches(int noches) {
+        this.noches = noches;
+    }
+   
+   
+
+
    
     
 }
