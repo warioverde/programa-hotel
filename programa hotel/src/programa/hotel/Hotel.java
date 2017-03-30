@@ -5,15 +5,32 @@
  */
 package programa.hotel;
 
+import java.util.Scanner;
+
 /**
  *
  * @author tatan
  */
 public class Hotel {
-    //habitaciones y precios.
-    
-    Habitacion arrayHabitaciones[] = new Habitacion [10];
+    Scanner leer = new Scanner(System.in);
     
     
+    
+    public void llenarHabitaciones(){
+        int noches;
+        Habitacion arrayHabitaciones[] = new Habitacion [10];
+        for (int i = 0; i < arrayHabitaciones.length; i++) {
+            arrayHabitaciones[i]= new Habitacion();
+            
+            
+            if (Habitacion.setEstado() ==1){
+                Habitacion.setNoches();
+            }
+        }
+       
+    }
+    public int calculoNoches(){
+        
+    }
     
 }
